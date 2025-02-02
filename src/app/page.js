@@ -1,14 +1,15 @@
 "use client"
 
 import { Toaster } from "react-hot-toast";
+import HeaderSection from "./components/HeaderSection";
+import HeroSection from "./components/HeroSection";
 import AboutCardiCare from "./components/AboutCardiCare";
+import ServicesOffered from "./components/ServicesOffered";
+import VideoSection from "./components/VideoSection";
 import CardicareVision from "./components/CompleteCardicare";
 import ContactUsDetails from "./components/ContactUsSection";
 import FooterSection from "./components/FooterSection";
-import HeaderSection from "./components/HeaderSection";
-import HeroSection from "./components/HeroSection";
-import ServicesOffered from "./components/ServicesOffered";
-import VideoSection from "./components/VideoSection";
+
 
 export default function Home() {
   
