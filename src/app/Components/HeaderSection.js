@@ -1,17 +1,13 @@
 "use client"
 import Image from "next/image";
-import { IoSunny } from "react-icons/io5";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+
 import { HiMenuAlt3 } from "react-icons/hi";
 import logo from "@/app/assets/cardicare_logo.png"
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-import { useContext, useEffect, useRef } from "react";
-import { UserSupabaseContext } from "@/app/store/SupabaseContext";
-import gsap from "gsap";
+
 import ButtonComponent from "./ButtonCompoents";
 export default function HeaderSection(){
-    const supabaseContext = useContext(UserSupabaseContext);
   const pathname = usePathname();
     return(
         <div
