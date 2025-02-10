@@ -1,6 +1,6 @@
 "use client"
-import FooterSection from "../components/FooterSection";
-import HeaderSection from "../components/HeaderSection";
+import FooterSection from "../Components/FooterSection";
+import HeaderSection from "../Components/HeaderSection";
 import { MdAttachEmail } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { BsFillPatchQuestionFill } from "react-icons/bs";

@@ -1,6 +1,6 @@
 "use client"
-import FooterSection from "../components/FooterSection";
-import HeaderSection from "../components/HeaderSection";
+import FooterSection from "../Components/FooterSection";
+import HeaderSection from "../Components/HeaderSection";
 import Image from "next/image";
 import visonBlob from "@/app/assets/vision.svg"
 import visonBlob2 from "@/app/assets/vision2.svg"

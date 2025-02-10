@@ -1,6 +1,6 @@
 "use client"
-import FooterSection from "../components/FooterSection";
-import HeaderSection from "../components/HeaderSection";
+import FooterSection from "../Components/FooterSection";
+import HeaderSection from "../Components/HeaderSection";
 import ServiceCard from "./Components/ServiceCard";
 
 export default function ServiceSection(){
