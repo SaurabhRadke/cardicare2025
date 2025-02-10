@@ -1,24 +1,38 @@
+import Image from "next/image"
+import eecpImage from "@/app/assets/eecpImage.png"
+import chelation from "@/app/assets/chelationIcon.png"
+import electrocrdiography from "@/app/assets/Electrocardiogram.png"
+import Arterial_Clearance_Therapy from "@/app/assets/Arterial_Clearance_Therapy.png"
+import periscope from "@/app/assets/periscope.png"
+
+
+
 export default function ServicesOffered(){
   const allServices=[
   {
     "name": "Enhanced External Counterpulsation",
-    "description": "A non-invasive therapy that improves blood flow and reduces angina symptoms using pressure cuffs to support circulation."
+    "description": "A non-invasive therapy that improves blood flow and reduces angina symptoms using pressure cuffs to support circulation.",
+    "image":eecpImage
   },
   {
     "name": "Chelation Therapy",
-    "description": "A treatment that removes heavy metals and toxins from the bloodstream, helping improve cardiovascular health and circulation."
+    "description": "A treatment that removes heavy metals and toxins from the bloodstream, helping improve cardiovascular health and circulation.",
+    "image":chelation
   },
   {
     "name": "Electrocardiogram (ECG/EKG)",
-    "description": "A quick, painless test that records heart activity, helping detect irregular rhythms, blockages, and signs of heart disease."
+    "description": "A quick, painless test that records heart activity, helping detect irregular rhythms, blockages, and signs of heart disease.",
+    "image":electrocrdiography
   },
   {
     "name": "Arterial Clearance Therapy",
-    "description": "A therapy aimed at reducing arterial blockages and enhancing circulation, often combined with lifestyle changes for heart health."
+    "description": "A therapy aimed at reducing arterial blockages and enhancing circulation, often combined with lifestyle changes for heart health.",
+    "image":Arterial_Clearance_Therapy
   },
   {
     "name": "Periscope Cardiovascular Testing",
-    "description": "An advanced diagnostic test that assesses heart and vascular health, detects risks, and aids in personalized treatment planning."
+    "description": "An advanced diagnostic test that assesses heart and vascular health, detects risks, and aids in personalized treatment planning.",
+    "image":periscope
   }
 ]
   return(
@@ -39,7 +53,9 @@ export default function ServicesOffered(){
                               key={index} 
                               className="w-full sm:w-[20rem] flex flex-col items-center gap-4 md:gap-6 justify-center p-6 md:h-[25rem] rounded-xl bg-zinc-200 shadow-lg shadow-zinc-800 shrink-0"
                           >
-                              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-full border border-zinc-700"></div>
+                              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-full">
+                                {eachService.image &&<Image src={eachService.image} alt={eachService.name} className=" w-full "/>}
+                              </div>
                               <h1 className="w-full md:w-[90%] text-center text-xl md:text-2xl lg:text-[1.8rem] leading-tight md:leading-8 font-medium text-zinc-900">
                                   {eachService.name}
                               </h1>

@@ -1,4 +1,6 @@
 "use client"
+import FooterSection from "../components/FooterSection";
+import HeaderSection from "../components/HeaderSection";
 import { MdAttachEmail } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { BsFillPatchQuestionFill } from "react-icons/bs";
@@ -8,8 +10,7 @@ import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import toast from "react-hot-toast";
-
-export default function ContactUsDetails() {
+export default function ContactUs(){
     const [sendLoader, setSendLoader] = useState(false);
     const [formData, setFormData] = useState({
         firstName: '',
@@ -28,6 +29,7 @@ export default function ContactUsDetails() {
             toast.error('Please enter your last name');
             return false;
         }
+        
        
         
         if (!formData.phoneNumber.trim()) {
@@ -38,7 +40,7 @@ export default function ContactUsDetails() {
             toast.error('Please enter a valid 10-digit phone number');
             return false;
         }
-    
+        
         return true;
     };
 
@@ -62,7 +64,7 @@ export default function ContactUsDetails() {
 
         try {
             const emailData = {
-                Email: formData?.email || "",
+                Email: formData.email,
                 Name: `${formData.firstName} ${formData.lastName}`,
                 Number: formData.phoneNumber,
                 Description: formData.comment
@@ -94,15 +96,16 @@ export default function ContactUsDetails() {
             setSendLoader(false);
         }
     };
-    
-
     return(
-        <div id="contact" className="text-zinc-900 w-full min-h-screen bg-rose-600 bg-opacity-60 px-3 py-10 flex items-center flex-col gap-6">
-            <h1 className="text-[3rem] text-center leading-[2.7rem] font-semibold tracking-wider mt-10">Your Heart Health is Our Priority</h1>
+        <div className=" w-full min-h-screen ">
+            <HeaderSection/>
+            <div className=" w-full ">
+            <div id="contact" className="text-zinc-900 w-full min-h-screen px-3 py-10 flex items-center flex-col gap-6">
+            <h1 className="text-[3rem] text-center text-rose-600 leading-[2.7rem] font-semibold tracking-wider mt-10">Your Heart Health is Our Priority</h1>
             <div className="w-full min-h-screen py-5 flex md:flex-row flex-col gap-4">
                 <div className="w-[100%] md:w-[50%] h-full py-4 pl-[5%]">
                     <h1 className="text-[2rem] md:text-[3rem] font-[500] tracking-wide leading-7">We&apos;re Here for Your Heart</h1>
-                    <p className="text-[1rem] md:text-[1.2rem] text-zinc-200 w-[95%] leading-6 mt-8 text-center md:w-[80%]">Connect with Cardicare Clinic for comprehensive cardiovascular care. From advanced treatments like EECP to preventive care and diagnostics, we&apos;re committed to supporting your heart health journey.</p>
+                    <p className="text-[1rem] md:text-[1.2rem] text-zinc-600 w-[95%] leading-6 mt-8 text-center md:w-[80%]">Connect with Cardicare Clinic for comprehensive cardiovascular care. From advanced treatments like EECP to preventive care and diagnostics, we&apos;re committed to supporting your heart health journey.</p>
                     <div className="w-[70%] mt-10 h-auto  flex flex-col items-start">
                         <div className="flex px-4 md:px-8 items-center gap-2 text-[1.4rem]">
                             <MdAttachEmail className="text-[1.6rem] text-sky-700 shrink-0"/>
@@ -202,5 +205,8 @@ export default function ContactUsDetails() {
                 </div>
             </div>
         </div>
-    );
+            </div>
+            <FooterSection/>
+        </div>
+    )
 }

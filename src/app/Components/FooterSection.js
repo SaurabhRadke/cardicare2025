@@ -8,7 +8,6 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { FaUsers } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import logo from "@/app/assets/cardicare_logo.png"
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -19,7 +18,7 @@ export default function FooterSection(){
         console.log(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`)
       };
     return(
-        <footer className=" w-full   flex  justify-center   ">
+        <footer className=" w-full   flex  justify-center border-t border-rose-600   ">
             <div className=" w-[100%] min-h-[50vh]  rounded-t-xl  py-8 px-[4%] flex md:flex-row flex-col ">
                 <div className=" w-full md:w-[50%] h-full  pt-10">
                     <div className=" flex items-center gap-2">
