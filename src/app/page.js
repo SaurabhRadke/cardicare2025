@@ -9,7 +9,6 @@ import HeaderSection from "./Components/HeaderSection";
 import HeroSection from "./Components/HeroSection";
 import ServicesOffered from "./Components/ServicesOffered";
 import VideoSection from "./Components/VideoSection";
-
 export default function Home() {
   
 

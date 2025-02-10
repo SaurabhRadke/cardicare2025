@@ -78,7 +78,7 @@ export default function AboutCardiCare(){
                             <Carousel 
                                 showArrows={true}
                                 showStatus={false}
-                                showThumbs={true}
+                                showThumbs={false}
                                 infiniteLoop={true}
                                 autoPlay={true}
                                 interval={3000}
