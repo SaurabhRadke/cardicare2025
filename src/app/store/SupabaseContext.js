@@ -1,10 +1,10 @@
  "use client"
  import { createContext, useEffect, useState } from "react"
-import { SupabaseBrowser } from "../utiles/supabase/browser";
+// import { SupabaseBrowser } from "../utiles/supabase/browser";
  export const UserSupabaseContext = createContext({});
 
 export default function SupabaseAuthProvider({children}){
-   const Supabase=SupabaseBrowser()
+   // const Supabase=SupabaseBrowser()
     const [dark,setDark]=useState(true)
     const[sidebar,setSidebar]=useState(false)
     const [Authenticate,setAuthenticated]=useState(false)
